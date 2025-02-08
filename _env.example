@@ -1,0 +1,24 @@
+# Supabase Configuration
+# ----------------------
+# Environment variables for Supabase connection and authentication.
+# 
+# Purpose:
+# - Provides Supabase project URL and anon key for client connection
+# - Enables database access and authentication features
+# - Required for all Supabase operations
+# 
+# Security:
+# - CRITICAL: Keep this file private and never commit to version control
+# - Contains sensitive credentials that must be protected
+# - Use .env.example for public templates
+# 
+# Integration Points:
+# - src/lib/supabase.ts: Creates Supabase client instance
+# - All components using Supabase features
+# 
+# Required Variables:
+# - VITE_SUPABASE_URL: Project API endpoint
+# - VITE_SUPABASE_ANON_KEY: Public API key for anonymous access
+
+VITE_SUPABASE_URL=https://YOUR SUBASE URL.supabase.co
+VITE_SUPABASE_ANON_KEY=YOUR SUPABASE ANON KEY

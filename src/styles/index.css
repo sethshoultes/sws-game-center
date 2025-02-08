@@ -1,0 +1,61 @@
+/**
+ * Global Styles Configuration
+ * -------------------------
+ * Core styling setup for the Game Center application using Tailwind CSS.
+ * 
+ * Purpose:
+ * - Configures Tailwind CSS base styles
+ * - Provides global style utilities
+ * - Defines custom component classes
+ * - Ensures consistent styling across the application
+ * 
+ * Structure:
+ * 1. Tailwind Directives:
+ *    - @tailwind base: Reset and base styles
+ *    - @tailwind components: Component classes
+ *    - @tailwind utilities: Utility classes
+ * 
+ * 2. Base Layer:
+ *    - Sets antialiasing for improved text rendering
+ *    - Applies to all text content
+ * 
+ * 3. Component Layer:
+ *    - btn: Primary button style
+ *    - btn-secondary: Alternative button style
+ *    - Both include:
+ *      - Consistent padding and spacing
+ *      - Focus and hover states
+ *      - Proper text contrast
+ * 
+ * Integration Points:
+ * - All React components
+ * - Game interfaces
+ * - Admin panel
+ * - Authentication forms
+ * 
+ * @status ACTIVE and REQUIRED
+ * - Core styling configuration
+ * - Used throughout application
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  /* Primary button style with indigo theme */
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  /* Secondary button style with subtle gray theme */
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+}

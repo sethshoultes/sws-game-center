@@ -1,0 +1,45 @@
+<!--
+  Game Center Entry Point
+  ----------------------
+  Primary HTML entry point for the Game Center application.
+  
+  Purpose:
+  - Serves as the main container for the React application
+  - Configures viewport and character encoding settings
+  - Provides root element for React mounting
+  
+  Data Flow:
+  1. Browser loads this HTML file
+  2. React mounts to #root element
+  3. Application renders and initializes:
+     - Loads game components
+     - Sets up Supabase connection
+     - Manages routing and state
+  
+  Integration Points:
+  - src/main.tsx: React initialization
+  - src/App.tsx: Root React component
+  - Tailwind CSS: Styling through class utilities
+  
+  Browser Support:
+  - Modern browsers with ES6+ support
+  - Viewport meta ensures mobile compatibility
+  - UTF-8 encoding for proper character handling
+  
+  @status ACTIVE and REQUIRED
+  - Core application entry point
+  - Essential for application initialization
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Game Center</title>
+    <script type="module" crossorigin src="/assets/main-DSLVrFse.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BPnVh29O.css">
+  </head>
+  <body class="bg-gray-100">
+    <div id="root" class="min-h-screen"></div>
+  </body>
+</html>

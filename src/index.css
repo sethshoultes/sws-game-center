@@ -1,0 +1,46 @@
+/**
+ * Core Tailwind CSS Configuration
+ * -----------------------------
+ * Primary stylesheet that imports and configures Tailwind CSS for the application.
+ * 
+ * Purpose:
+ * - Imports Tailwind's base, components, and utilities layers
+ * - Provides foundation for application styling
+ * - Enables utility-first CSS approach
+ * 
+ * Layer Structure:
+ * 1. @tailwind base:
+ *    - Resets default browser styles
+ *    - Provides foundational elements
+ *    - Sets base typography
+ * 
+ * 2. @tailwind components:
+ *    - Component-specific styles
+ *    - Reusable patterns
+ *    - Custom component classes
+ * 
+ * 3. @tailwind utilities:
+ *    - Utility classes for rapid styling
+ *    - Responsive design helpers
+ *    - Interactive state modifiers
+ * 
+ * Integration Points:
+ * - All React components
+ * - Game interfaces
+ * - Admin panel
+ * - Layout system
+ * 
+ * Used By:
+ * - Crossy Road game styling
+ * - Flappy Bird game styling
+ * - Admin interface design
+ * - Navigation components
+ * 
+ * @status ACTIVE and REQUIRED
+ * - Core styling configuration
+ * - Essential for application design
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

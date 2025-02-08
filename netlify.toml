@@ -1,0 +1,57 @@
+# Netlify Configuration
+# --------------------
+# Deployment and routing configuration for Netlify hosting.
+# 
+# Purpose:
+# - Defines build settings for deployment
+# - Configures client-side routing rules
+# - Ensures proper SPA behavior
+# 
+# Data Flow:
+# 1. Build Process:
+#    - npm run build executes Vite build
+#    - Output generated in 'dist' directory
+#    - Static assets prepared for deployment
+# 
+# 2. Routing Rules:
+#    - Admin routes handled by client router
+#    - All paths redirect to index.html
+#    - Preserves React Router functionality
+# 
+# Integration Points:
+# - Vite build system
+# - React Router
+# - Game Center SPA
+# 
+# @status ACTIVE and REQUIRED
+# - Essential for deployment
+# - Critical for routing
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Admin Route Handling
+# Ensures /admin and /admin/* paths
+# are handled by the React Router
+[[redirects]]
+  from = "/admin"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Admin Subroutes
+[[redirects]]
+  from = "/admin/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# SPA Fallback
+# Redirects all unmatched routes to
+# index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
