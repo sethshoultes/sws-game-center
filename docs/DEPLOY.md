@@ -42,6 +42,11 @@ this dev's to look for — the lead sources them from
 VITE_SUPABASE_URL="…" VITE_SUPABASE_ANON_KEY="…" npm run build
 ```
 
+**Both vars must be set at build time, not skipped.** Same as flappy-bird, `createClient()`
+doesn't validate its arguments at call time, so a build with neither var set still succeeds —
+but the leaderboards for both games will fail silently in the browser console at runtime instead
+of erroring the build. Set both before running `npm run build` for a working deploy.
+
 ## Netlify-specific config the box needs to replicate
 
 `netlify.toml` (`[build] command/publish`, matching the two commands above and `dist`) plus
